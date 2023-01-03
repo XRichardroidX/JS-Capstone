@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+:root {
+  --bg-clr-default: #0a2647;
+  --accent-clr-1: #fff;
+  --accent-clr-2: #fcb900;
+  --crl-dark: #0d0d0d;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,27 +20,36 @@ html {
 }
 
 body {
-  background-color: #3d3f3d;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.6rem;
+  background-color: var(--bg-clr-default);
+  color: var(--accent-clr-1);
   line-height: 1.6;
   letter-spacing: 0.04rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--crl-dark);
+  color: var(--accent-clr-1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
 }
 
 .logo span {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.7;
-  color: rgb(255, 0, 0);
-  margin-inline: 2rem;
+  margin-inline: 0.5em;
+  color: var(--accent-clr-2);
 }
 
 .navmenu {
@@ -47,13 +65,13 @@ header {
 
 .navmenu li a {
   text-decoration: none;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: var(--accent-clr-1);
+  font-weight: 400;
 }
 
 .container h1 {
-  margin: 10px;
-  color: rgb(255, 255, 255);
+  color: var(--accent-clr-1);
   font-size: 30px;
   width: 70%;
 }
@@ -119,7 +137,7 @@ footer {
   height: 5rem;
   font-size: 2rem;
   width: 100%;
-  background-color: #383838;
+  background-color: var(--crl-dark);
   color: white;
 }
 
