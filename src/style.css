@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+:root {
+  --bg-clr-default: #0a2647;
+  --accent-clr-1: #fff;
+  --accent-clr-2: #fcb900;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,11 +19,11 @@ html {
 }
 
 body {
-  background-color: #3d3f3d;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.6rem;
+  background-color: var(--bg-clr-default);
+  color: var(--accent-clr-1);
   line-height: 1.6;
   letter-spacing: 0.04rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
@@ -23,15 +31,15 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #000;
-  color: #fff;
+  color: var(--accent-clr-1);
 }
 
 .logo span {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.7;
-  color: #fff;
   margin-inline: 2rem;
+  color: var(--accent-clr-2);
 }
 
 .navmenu {
@@ -47,8 +55,9 @@ header {
 
 .navmenu li a {
   text-decoration: none;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: var(--accent-clr-1);
+  font-weight: 400;
 }
 
 .container h1 {
