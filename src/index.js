@@ -13,8 +13,6 @@ function getData() {
   fetch('https://api.tvmaze.com/shows/1/episodes')
     .then((res) => res.json())
     .then((res) => {
-      console.log(res[1]);
-
       res.forEach((index) => {
         card = document.createElement('div');
         card.className = 'card';
