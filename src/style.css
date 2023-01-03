@@ -16,7 +16,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%;
+
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -45,7 +46,7 @@ header {
 }
 
 .logo span {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   font-weight: 700;
   line-height: 1.7;
   margin-inline: 0.5em;
@@ -60,17 +61,19 @@ header {
 
 .navmenu li {
   list-style: none;
-  margin: 2rem;
+
+  /* margin: 2rem; */
 }
 
 .navmenu li a {
   text-decoration: none;
-  font-size: 1.5rem;
+
+  /* font-size: 1.5rem; */
   color: var(--accent-clr-1);
   font-weight: 400;
 }
 
-.container h1 {
+.h1 {
   color: var(--accent-clr-1);
   font-size: 30px;
   width: 70%;
@@ -88,7 +91,7 @@ header {
   background-color: rgb(0, 0, 0);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30rem;
+  width: 20rem;
   margin: 3rem;
   padding: 2rem;
   box-shadow: rgb(0, 0, 0) 4px 8px 12px;
@@ -99,10 +102,11 @@ header {
 }
 
 .watch-name {
-  margin: 15% 10% 0 20%;
+  /* margin: 15% 10% 0 20%; */
   padding-top: 15rem;
+  margin: 0.8em 0;
   color: white;
-  font-size: 2em;
+  font-size: 1.25rem;
 }
 
 .full-date {
@@ -135,7 +139,8 @@ footer {
   bottom: 0;
   text-align: center;
   height: 5rem;
-  font-size: 2rem;
+
+  /* font-size: 2rem; */
   width: 100%;
   background-color: var(--crl-dark);
   color: white;
@@ -151,7 +156,7 @@ footer {
   }
 
   .logo span {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-weight: 700;
     line-height: 1.7;
     color: rgb(255, 0, 0);
@@ -171,7 +176,8 @@ footer {
 
   .navmenu li a {
     text-decoration: none;
-    font-size: 2rem;
+
+    /* font-size: 2rem; */
     color: #fff;
   }
 
@@ -199,7 +205,7 @@ footer {
   }
 
   .logo span {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-weight: 700;
     line-height: 1.7;
     color: rgb(255, 0, 0);
@@ -219,7 +225,8 @@ footer {
 
   .navmenu li a {
     text-decoration: none;
-    font-size: 2rem;
+
+    /* font-size: 2rem; */
     color: #fff;
   }
 
@@ -262,12 +269,14 @@ footer {
 
   .navmenu li {
     list-style: none;
-    margin: 2rem;
+
+    /* margin: 2rem; */
   }
 
   .navmenu li a {
     text-decoration: none;
-    font-size: 2rem;
+
+    /* font-size: 2rem; */
     color: #fff;
   }
 
