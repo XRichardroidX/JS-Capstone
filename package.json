@@ -5,6 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack --mode development",
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d dist",
     "test": "jest"
   },
   "repository": {
