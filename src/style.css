@@ -1,72 +1,265 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
-  background-color: #3d3f3d;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.6rem;
-  line-height: 1.6;
-  letter-spacing: 0.04rem;
+    background-color: #3d3f3d;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.04rem;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
 }
 
 .logo span {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.7;
-  color: #fff;
-  margin-inline: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7;
+    color: rgb(255, 0, 0);
+    margin-inline: 2rem;
 }
 
 .navmenu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navmenu li {
-  list-style: none;
-  margin: 2rem;
+    list-style: none;
+    margin: 2rem;
 }
 
 .navmenu li a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .container h1 {
-  color: red;
-  font-size: 30px;
-  width: 70%;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    width: 70%;
+}
+
+.all-cards {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.all-cards .card {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://static.tvmaze.com/uploads/images/original_untouched/1/4392.jpg');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30rem;
+    margin: 3rem;
+    padding: 2rem;
+    box-shadow: rgb(0, 0, 0) 4px 8px 12px;
+}
+
+.watch-name {
+    margin: 15% 10% 0 20%;
+    padding-top: 15rem;
+    color: white;
+    font-size: 2em;
+}
+
+.full-date {
+    color: rgb(210, 189, 189);
+}
+
+.date {
+    color: gray;
+}
+
+.summary {
+    color: gray;
+}
+
+.full-summary {
+    color: rgb(125, 86, 86);
+}
+
+.btn {
+    padding: 10px;
+    background-color: orange;
+    margin: 5px;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  height: 5rem;
-  font-size: 2rem;
-  width: 100%;
-  background-color: #383838;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 5rem;
+    font-size: 2rem;
+    width: 100%;
+    background-color: #383838;
+    color: white;
+}
+
+@media screen and (min-width: 750px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: rgb(255, 255, 255);
+    }
+
+    .logo span {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.7;
+        color: rgb(255, 0, 0);
+        margin-inline: 2rem;
+    }
+
+    .navmenu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navmenu li {
+        list-style: none;
+        margin: 2rem;
+    }
+
+    .navmenu li a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .container h1 {
+        margin: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .all-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: rgb(255, 255, 255);
+    }
+
+    .logo span {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.7;
+        color: rgb(255, 0, 0);
+        margin-inline: 2rem;
+    }
+
+    .navmenu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navmenu li {
+        list-style: none;
+        margin: 2rem;
+    }
+
+    .navmenu li a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .container h1 {
+        margin: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .all-cards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: rgb(255, 255, 255);
+    }
+
+    .logo span {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.7;
+        color: rgb(255, 0, 0);
+        margin-inline: 2rem;
+    }
+
+    .navmenu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navmenu li {
+        list-style: none;
+        margin: 2rem;
+    }
+
+    .navmenu li a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .container h1 {
+        margin: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .all-cards {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+    }
 }
