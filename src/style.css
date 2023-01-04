@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+
   /* font-size: 62.5%; */
 }
 
@@ -100,6 +101,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   width: 20rem;
+
   /* margin: 3rem; */
   padding: 2rem;
   box-shadow: rgb(0, 0, 0) 4px 8px 12px;
@@ -153,7 +155,6 @@ footer {
   background-color: var(--crl-dark);
   color: white;
 }
-
 
 .overlay {
   background-color: rgba(10, 38, 71, 0.9);
@@ -211,10 +212,10 @@ footer {
 }
 
 .modal-image {
-  height: 80vh; 
+  height: 80vh;
   object-fit: cover;
   display: block;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .show-title {
