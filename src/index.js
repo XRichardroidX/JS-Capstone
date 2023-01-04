@@ -1,5 +1,7 @@
 import './style.css';
 import displayMoviesData from './module/displayMoviesData.js';
+import displayDataInModal from './module/displayDataInModal.js';
+import getMoviesData from './module/getData.js';
 
 window.onload = displayMoviesData();
 
@@ -15,6 +17,8 @@ window.addEventListener('load', () => {
     if (isCommentsBtn) {
       overlay.classList.add('overlay-active');
       modal.classList.add('modal-active');
+      const index = Number.parseInt(e.target.getAttribute('id'), 10);
+      getMoviesData().then((data) => displayDataInModal(data, index));
     }
   });
 
