@@ -32,11 +32,21 @@ getData();
 
 window.addEventListener('load', () => {
   const moviesWrapper = document.querySelector('[data-movies-wrapper]');
+  const modal = document.querySelector('.modal-content');
+  const overlay = document.querySelector('.overlay');
+  const modlaCloseBtn = document.querySelector('[data-modal-close]');
+
   moviesWrapper.addEventListener('click', (e) => {
     const isCommentsBtn = e.target.hasAttribute('data-comment-btn');
 
     if (isCommentsBtn) {
-      console.log('Comments btn clicked');
+      overlay.classList.add('overlay-active');
+      modal.classList.add('modal-active');
     }
+  });
+
+  modlaCloseBtn.addEventListener('click', () => {
+    modal.classList.remove('modal-active');
+    overlay.classList.remove('overlay-active');
   });
 });
