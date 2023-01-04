@@ -86,6 +86,21 @@ header {
   width: 70%;
 }
 
+.number-of-shows {
+  color: white;
+  float: right;
+  margin-top: -80px;
+  font-size: 20px;
+  box-shadow: red ;
+}
+
+.full-like img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 15rem 10rem;
+}
+
 .all-cards {
   display: grid;
   grid-template-columns: auto;
