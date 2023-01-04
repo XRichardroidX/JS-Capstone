@@ -2,8 +2,8 @@ import './style.css';
 import displayMoviesData from './module/displayMoviesData.js';
 import displayDataInModal from './module/displayDataInModal.js';
 import getMoviesData from './module/getData.js';
-import postLikeData from './module/postLike';
-import getLikeData from './module/getLikeData';
+import postLikeData from './module/postLike.js';
+import getLikeData from './module/getLikeData.js';
 
 window.onload = displayMoviesData();
 
