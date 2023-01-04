@@ -1,31 +1,29 @@
 import './style.css';
+import displayMoviesData from './module/displayMoviesData.js';
+import displayDataInModal from './module/displayDataInModal.js';
+import getMoviesData from './module/getData.js';
 
-const allCards = document.querySelector('.all-cards');
-function removeTags(str) {
-  if ((str === null) || (str === '')) return false;
-  str = str.toString();
-  return str.replace(/(<([^>]+)>)/ig, '');
-}
+window.onload = displayMoviesData();
 
-let card;
+window.addEventListener('load', () => {
+  const moviesWrapper = document.querySelector('[data-movies-wrapper]');
+  const modal = document.querySelector('.modal-content');
+  const overlay = document.querySelector('.overlay');
+  const modlaCloseBtn = document.querySelector('[data-modal-close]');
 
-function getData() {
-  fetch('https://api.tvmaze.com/shows/1/episodes')
-    .then((res) => res.json())
-    .then((res) => {
-      res.forEach((index) => {
-        card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-                <img src=${index.image.original} alt="">
-                <h2 class="watch-name">${index.name}</h2>
-                <h4 class="full-date"><b class="date">Date:</b>${index.airdate}</h4>
-                <p class="full-summary"><b class="summary">Summary:</b>${removeTags(index.summary)}</p>
-                    <button class="btn">Comment</button>
-        `;
-        allCards.appendChild(card);
-      });
-    });
-}
+  moviesWrapper.addEventListener('click', (e) => {
+    const isCommentsBtn = e.target.hasAttribute('data-comment-btn');
 
-getData();
+    if (isCommentsBtn) {
+      overlay.classList.add('overlay-active');
+      modal.classList.add('modal-active');
+      const index = Number.parseInt(e.target.getAttribute('id'), 10);
+      getMoviesData().then((data) => displayDataInModal(data, index));
+    }
+  });
+
+  modlaCloseBtn.addEventListener('click', () => {
+    modal.classList.remove('modal-active');
+    overlay.classList.remove('overlay-active');
+  });
+});
