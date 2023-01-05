@@ -46,24 +46,33 @@
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/150" alt="" class="modal-image" data-modal-image>
           <h3 class="show-title" data-show-title>Show Title</h3>
+          <p class="show-summary" data-show-summary></p>
         </div>
-        <div class="show-details">
-          <div class="date" data-show-date>Release Date: 12/12/2022</div>
-          <div class="episodes">Episodes: 63</div>
+        <div class="show-info">
+          <div class="show-details">
+            <div class="date">Premiere Date: <span data-premiered></span></div>
+            <div class="episodes">Language: <span data-language></span></div>
+          </div>
+          <div class="show-details">
+            <div class="date">Status: <span data-status></span></div>
+            <div class="episodes">Genres: <span data-genres></span></div>
+          </div>
+        </div>
+        <div class="comments-wrapper">
+          <h4 class="comments-heading">Comments <span>(2)</span></h4>
+          <ul data-comments-list>
+          </ul>
         </div>
         <div class="modal--comments-wrapper">
-          <h4>Comments <span>(2)</span></h4>
-          <ul data-comments-list>
-           
-          </ul>
-          <h4>Add a comment</h4>
+          <h4 class="comments-heading">Add a comment</h4>
           <div class="comments-form-wrapper">
             <form action="" data-comments-form>
               <div class="form-control">
                 <input type="text" placeholder="Your name" data-username required>
               </div>
               <div class="form-control">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your insights" data-user-comment required></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your insights" data-user-comment
+                  required></textarea>
               </div>
               <button class="btn comment-btn" type="submit">Comment</button>
             </form>
