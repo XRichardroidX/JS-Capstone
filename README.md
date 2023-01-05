@@ -117,37 +117,33 @@ Clone this repository to your desired folder:
  git clone https://github.com/XRichardroidX/JS-Capstone.git
 ```
 
-<!--
+
 Example command:
 
 ```sh
   cd JS-Capstone
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
 Example command:
 
 ```sh
-  npm install i
+  npm install
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
 Example command:
 
 ```sh
   npm run test
 ```
---->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
