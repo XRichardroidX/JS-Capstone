@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
       const likesCountWrapper = document.querySelectorAll('[data-likes-count]');
 
       const index = Number.parseInt(e.target.getAttribute('id'), 10);
-      likesCountWrapper[index - 1].innerText = updateLikesCount(index);
+      likesCountWrapper[index - 1].innerText = updateLikesCount(index, 'data-likes-count');
       getMoviesData().then(() => postLikeData(index - 1));
     }
   });
@@ -42,7 +42,7 @@ window.addEventListener('load', () => {
     overlay.classList.remove('overlay-active');
   });
 
-  const commentsForm = document.querySelector('[ data-comments-form]');
+  const commentsForm = document.querySelector('[data-comments-form]');
   const username = document.querySelector('[data-username]');
   const comment = document.querySelector('[data-user-comment]');
 
@@ -69,6 +69,7 @@ window.addEventListener('load', () => {
     e.preventDefault();
 
     const modalContent = document.querySelector('[data-modal-content]');
+    const commentsCountWrapper = document.querySelector('[data-tv-show-comments]');
     const tvShowId = Number.parseInt(modalContent.getAttribute('data-modal-id'), 10);
     userComment = {
       ...userComment,
@@ -77,6 +78,7 @@ window.addEventListener('load', () => {
 
     addCommentsToMarkup(userComment);
     saveCommentDataAsync(userComment);
+    commentsCountWrapper.innerText = Number.parseInt(commentsCountWrapper.innerText, 10) + 1;
     commentsForm.reset();
   });
 });
