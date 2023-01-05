@@ -41,7 +41,7 @@
   <footer>Created by Microverse under CC license. All rights reserved.</footer>
   <section class="container">
     <div class="overlay">
-      <div class="modal-content" id="modal">
+      <div class="modal-content" id="modal" data-modal-content>
         <button class="modal-close" data-modal-close>close</button>
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/150" alt="" class="modal-image" data-modal-image>
@@ -53,22 +53,17 @@
         </div>
         <div class="modal--comments-wrapper">
           <h4>Comments <span>(2)</span></h4>
-          <ul>
-            <li>
-              <p>03/11/21 Alex: Supper cool movie</p>
-            </li>
-            <li>03/11/21 Alex: Supper cool movie</li>
-            <li>03/11/21 Alex: Supper cool movie</li>
-            <li>03/11/21 Alex: Supper cool movie</li>
+          <ul data-comments-list>
+           
           </ul>
           <h4>Add a comment</h4>
           <div class="comments-form-wrapper">
-            <form action="">
+            <form action="" data-comments-form>
               <div class="form-control">
-                <input type="text" placeholder="Your name">
+                <input type="text" placeholder="Your name" data-username required>
               </div>
               <div class="form-control">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your insights"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your insights" data-user-comment required></textarea>
               </div>
               <button class="btn comment-btn" type="submit">Comment</button>
             </form>

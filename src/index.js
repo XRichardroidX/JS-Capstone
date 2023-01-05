@@ -3,7 +3,9 @@ import displayMoviesData from './module/displayMoviesData.js';
 import displayDataInModal from './module/displayDataInModal.js';
 import getMoviesData from './module/getData.js';
 import postLikeData from './module/postLike.js';
-import getLikeData from './module/getLikeData.js';
+import saveCommentDataAsync from './module/saveCommentDataAsync.js';
+import displayComments from './module/displayComments.js';
+import addCommentsToMarkup from './module/addCommentsToMarkup.js';
 
 window.onload = displayMoviesData();
 
@@ -15,12 +17,19 @@ window.addEventListener('load', () => {
 
   moviesWrapper.addEventListener('click', (e) => {
     const isCommentsBtn = e.target.hasAttribute('data-comment-btn');
+    const isLikeBtn = e.target.hasAttribute('data-like-btn');
 
     if (isCommentsBtn) {
       overlay.classList.add('overlay-active');
       modal.classList.add('modal-active');
       const index = Number.parseInt(e.target.getAttribute('id'), 10);
       getMoviesData().then((data) => displayDataInModal(data, index));
+      displayComments(index);
+    }
+
+    if (isLikeBtn) {
+      const index = Number.parseInt(e.target.getAttribute('id'), 10);
+      getMoviesData().then(() => postLikeData(index - 1));
     }
   });
 
@@ -28,18 +37,42 @@ window.addEventListener('load', () => {
     modal.classList.remove('modal-active');
     overlay.classList.remove('overlay-active');
   });
-});
 
-window.addEventListener('load', () => {
-  const moviesWrapper = document.querySelector('[data-movies-wrapper]');
-  moviesWrapper.addEventListener('click', (e) => {
-    const isCommentsBtn = e.target.hasAttribute('data-like-btn');
+  const commentsForm = document.querySelector('[ data-comments-form]');
+  const username = document.querySelector('[data-username]');
+  const comment = document.querySelector('[data-user-comment]');
 
-    if (isCommentsBtn) {
-      const index = Number.parseInt(e.target.getAttribute('id'), 10);
-      getMoviesData().then(() => postLikeData(index - 1));
-    }
+  let userComment = {
+    username: '',
+    comment: '',
+  };
+
+  username.addEventListener('input', (e) => {
+    userComment = {
+      ...userComment,
+      username: e.target.value.trim(),
+    };
+  });
+
+  comment.addEventListener('input', (e) => {
+    userComment = {
+      ...userComment,
+      comment: e.target.value.trim(),
+    };
+  });
+
+  commentsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const modalContent = document.querySelector('[data-modal-content]');
+    const tvShowId = Number.parseInt(modalContent.getAttribute('data-modal-id'), 10);
+    userComment = {
+      ...userComment,
+      item_id: tvShowId,
+    };
+
+    addCommentsToMarkup(userComment);
+    saveCommentDataAsync(userComment);
+    commentsForm.reset();
   });
 });
-
-getLikeData();
