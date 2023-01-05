@@ -6,6 +6,7 @@ import postLikeData from './module/postLike.js';
 import saveCommentDataAsync from './module/saveCommentDataAsync.js';
 import displayComments from './module/displayComments.js';
 import addCommentsToMarkup from './module/addCommentsToMarkup.js';
+import updateLikesCount from './module/updateLikesCount.js';
 
 window.onload = displayMoviesData();
 
@@ -28,7 +29,10 @@ window.addEventListener('load', () => {
     }
 
     if (isLikeBtn) {
+      const likesCountWrapper = document.querySelectorAll('[data-likes-count]');
+
       const index = Number.parseInt(e.target.getAttribute('id'), 10);
+      likesCountWrapper[index - 1].innerText = updateLikesCount(index);
       getMoviesData().then(() => postLikeData(index - 1));
     }
   });

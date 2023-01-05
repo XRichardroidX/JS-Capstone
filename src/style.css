@@ -16,8 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-
-  /* font-size: 62.5%; */
 }
 
 /* Utilities */
@@ -36,11 +34,15 @@ body {
 }
 
 header {
+  background-color: var(--crl-dark);
+  color: var(--accent-clr-1);
+  width: 100%;
+}
+
+.header--wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--crl-dark);
-  color: var(--accent-clr-1);
 }
 
 .logo {
@@ -53,7 +55,6 @@ header {
 }
 
 .logo span {
-  /* font-size: 1.8rem; */
   font-weight: 700;
   line-height: 1.7;
   margin-inline: 0.5em;
@@ -68,8 +69,6 @@ header {
 
 .navmenu li a {
   text-decoration: none;
-
-  /* font-size: 1.5rem; */
   color: var(--accent-clr-1);
   font-weight: 400;
 }
@@ -80,12 +79,20 @@ header {
   width: 70%;
 }
 
+.tv-show-stats {
+  background-color: #020d1a;
+  margin: 2.5em;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 2.5em 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .number-of-shows {
   color: white;
-  float: right;
-  margin-top: -80px;
-  font-size: 20px;
-  box-shadow: red;
 }
 
 .movie-img {
@@ -103,7 +110,7 @@ header {
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 1em;
   margin-bottom: 10em;
 }
 
@@ -117,6 +124,12 @@ header {
   height: 40rem;
   padding: 2rem;
   box-shadow: rgb(0, 0, 0) 4px 8px 12px;
+  border-radius: 0.5rem;
+  transform: scale(0.95);
+}
+
+.card :hover {
+  cursor: pointer;
 }
 
 .all-cards .card img {
@@ -124,7 +137,6 @@ header {
 }
 
 .watch-name {
-  /* margin: 15% 10% 0 20%; */
   padding-top: 15rem;
   margin: 0.8em 0;
   color: white;
@@ -151,6 +163,10 @@ header {
   padding: 10px;
   background-color: orange;
   margin-top: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -198,17 +214,23 @@ footer {
 .modal-content {
   background-color: rgba(16, 23, 34, 0.95);
   padding: 16px;
+  padding-bottom: 5rem;
   border-radius: 16px;
   margin: 0 auto;
   width: 90%;
-  height: 90vh;
-  max-height: 90vh;
+  height: 100vh;
+  max-height: 100vh;
   position: absolute;
-  top: 5%;
   left: 5%;
   z-index: 2;
   overflow-y: scroll;
   transform: scale(0);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-active {
@@ -236,9 +258,40 @@ footer {
   color: var(--accent-clr-2);
 }
 
-.show-details {
+.show-summary {
+  margin: 0 10em;
+  font-size: 1.15rem;
+}
+
+.show-details div {
+  margin: 1em 0;
+  font-size: 1.15rem;
+}
+
+.show-info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 10em;
+}
+
+.comments-wrapper {
+  margin: 2em 10em;
+}
+
+.comments-heading {
+  margin: 0.8em 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--accent-clr-2);
+}
+
+.comments-wrapper ul {
+  list-style: none;
+  color: #808080;
+}
+
+.comments-wrapper li {
+  font-size: 1.15rem;
 }
 
 .modal--comments-wrapper {
@@ -248,38 +301,36 @@ footer {
   align-items: center;
 }
 
-.modal--comments-wrapper ul {
-  margin-top: 1em;
-  margin-left: calc(-20%);
-  list-style: none;
-  color: #808080;
-}
-
-.modal--comments-wrapper li {
-  font-weight: 100;
-}
-
 .comments-form-wrapper {
-  margin: 1em 0;
-  width: 43%;
+  width: 100%;
+}
+
+.comments-form-wrapper form {
+  margin-left: 25%;
 }
 
 .form-control {
-  margin: 0.8em 0;
-}
-
-.comments-form-wrapper input {
-  height: 40px;
+  margin: 1em 0;
   width: 60%;
 }
 
+.comments-form-wrapper input {
+  height: 60px;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5em;
+}
+
 .comments-form-wrapper textarea {
-  width: 70%;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5em;
 }
 
 .comment-btn {
   width: 60%;
   font-size: 1.2rem;
+  height: 60px;
 }
 
 .container h1 {
