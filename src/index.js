@@ -4,8 +4,8 @@ import displayDataInModal from './module/displayDataInModal.js';
 import getMoviesData from './module/getData.js';
 import postLikeData from './module/postLike.js';
 import saveCommentDataAsync from './module/saveCommentDataAsync.js';
-import getCommentsDataAsync from './module/getCommentsDataAsync.js';
 import displayComments from './module/displayComments.js';
+import addCommentsToMarkup from './module/addCommentsToMarkup.js';
 
 window.onload = displayMoviesData();
 
@@ -71,9 +71,8 @@ window.addEventListener('load', () => {
       item_id: tvShowId,
     };
 
+    addCommentsToMarkup(userComment);
     saveCommentDataAsync(userComment);
     commentsForm.reset();
   });
 });
-
-getCommentsDataAsync(1);
