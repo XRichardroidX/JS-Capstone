@@ -69,5 +69,6 @@ window.addEventListener('load', () => {
     };
 
     saveCommentDataAsync(userComment);
+    commentsForm.reset();
   });
 });
