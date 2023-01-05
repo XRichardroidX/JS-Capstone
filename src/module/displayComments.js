@@ -7,7 +7,7 @@ const commentsCountWrapper = document.querySelector('[data-tv-show-comments]');
 const displayComments = async (index) => {
   commentsWrapper.innerHTML = '';
   const comments = await getCommentsDataAsync(index);
-  commentsCountWrapper.innerText = comments.length;
+  commentsCountWrapper.innerText = comments.length ? comments.length : 0;
 
   comments.forEach((comment) => {
     commentsWrapper.insertAdjacentHTML('beforeend', commentsBuilder(comment));
