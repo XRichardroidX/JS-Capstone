@@ -89,9 +89,7 @@ HTML-5
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://xrichardroidx.github.io/JS-Capstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
