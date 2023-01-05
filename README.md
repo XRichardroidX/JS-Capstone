@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Microverse JAVASCRIPT Capstone Project</b></h3>
 
 </div>
 
@@ -157,13 +157,13 @@ Example command:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Michael Amponsah**
 
 - GitHub: [@githubhandle](https://github.com/michaelamponsah)
 <!-- - Twitter: [@twitterhandle](https://twitter.com/twitterhandle) -->
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mikeamponsah/)
 
-👤 **Author2**
+👤 **Richard O.I**
 
 - GitHub: [@githubhandle](https://github.com/XRichardroidX)
 - Twitter: [@twitterhandle](https://twitter.com/RichardroiDX)
@@ -183,10 +183,6 @@ Feel free to check the [issues page](https://github.com/XRichardroidX/JS-Capston
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -205,7 +201,7 @@ I would like to thank Netflix for giving us the entertainment we need in our liv
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
