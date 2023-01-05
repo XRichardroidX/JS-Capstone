@@ -4,6 +4,8 @@ import displayDataInModal from './module/displayDataInModal.js';
 import getMoviesData from './module/getData.js';
 import postLikeData from './module/postLike.js';
 import saveCommentDataAsync from './module/saveCommentDataAsync.js';
+import getCommentsDataAsync from './module/getCommentsDataAsync.js';
+import displayComments from './module/displayComments.js';
 
 window.onload = displayMoviesData();
 
@@ -22,6 +24,7 @@ window.addEventListener('load', () => {
       modal.classList.add('modal-active');
       const index = Number.parseInt(e.target.getAttribute('id'), 10);
       getMoviesData().then((data) => displayDataInModal(data, index));
+      displayComments(index);
     }
 
     if (isLikeBtn) {
@@ -72,3 +75,5 @@ window.addEventListener('load', () => {
     commentsForm.reset();
   });
 });
+
+getCommentsDataAsync(1);
