@@ -167,6 +167,9 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Watch  demo recording
+[Video Recording](https://drive.google.com/file/d/1HCTG5N5DJrziXNhzNEnmZFnWNoNdxScE/view?usp=sharing)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
