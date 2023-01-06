@@ -7,6 +7,7 @@ import saveCommentDataAsync from './module/saveCommentDataAsync.js';
 import displayComments from './module/displayComments.js';
 import addCommentsToMarkup from './module/addCommentsToMarkup.js';
 import updateLikesCount from './module/updateLikesCount.js';
+import ItemCounter from './module/ItemCounter';
 
 window.onload = displayMoviesData();
 
@@ -77,8 +78,9 @@ window.addEventListener('load', () => {
     };
 
     addCommentsToMarkup(userComment);
-    saveCommentDataAsync(userComment);
+    // saveCommentDataAsync(userComment);
     commentsCountWrapper.innerText = Number.parseInt(commentsCountWrapper.innerText, 10) + 1;
+    // window.onload = console.log(ItemCounter('[data-comment-item-1]'));
     commentsForm.reset();
   });
 });

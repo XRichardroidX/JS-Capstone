@@ -1,4 +1,5 @@
 import removeTags from './removeTags.js';
+import '../assets/images/like-icon.svg'
 
 const movieCardBuilder = (data, index, likesCount) => `
   <img class="movie-img" src=${data.image.original} alt="">
