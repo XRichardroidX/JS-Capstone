@@ -9,8 +9,6 @@ const addCommentsToMarkup = (commentData) => {
   const year = date.getFullYear();
   const commentDate = `${year}-${month}-${day}`;
 
-  console.log(commentDate)
-
   const updatedCommentData = {
     ...commentData,
     creation_date: commentDate,
