@@ -78,9 +78,8 @@ window.addEventListener('load', () => {
     };
 
     addCommentsToMarkup(userComment);
-    // saveCommentDataAsync(userComment);
+    saveCommentDataAsync(userComment);
     commentsCountWrapper.innerText = Number.parseInt(commentsCountWrapper.innerText, 10) + 1;
-    // window.onload = console.log(ItemCounter('[data-comment-item-1]'));
     commentsForm.reset();
   });
 });
