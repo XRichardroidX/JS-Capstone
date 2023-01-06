@@ -7,6 +7,7 @@ import saveCommentDataAsync from './module/saveCommentDataAsync.js';
 import displayComments from './module/displayComments.js';
 import addCommentsToMarkup from './module/addCommentsToMarkup.js';
 import updateLikesCount from './module/updateLikesCount.js';
+import ItemCounter from './module/ItemCounter';
 
 window.onload = displayMoviesData();
 
