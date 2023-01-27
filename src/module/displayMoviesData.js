@@ -11,7 +11,7 @@ const displayMoviesData = async () => {
 
   data.forEach(async (movie, index) => {
     const likesCount = await getSingleShowLikeCount(index);
-    const card = document.createElement('div');
+    const card = document.createElement('li');
     const moviesCount = await getMoviesCount();
 
     card.className = 'card';
